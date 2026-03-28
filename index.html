@@ -1,629 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Lotus365 – India's Most Trusted Gaming Platform</title>
-<meta name="description" content="Lotus365 – India's Fastest Growing Gaming Site. Cricket, Live Casino, Sportsbook & More. 1 Crore+ Users. Join Now!"/>
-<link rel="canonical" href="https://Lotus365.black"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lotus365 – India's Most Trusted Gaming Platform</title>
+    <meta name="description" content="Lotus365 – India's Fastest Growing Gaming Site. Cricket, Live Casino, Sportsbook & More. 1 Crore+ Users. Join Now!"/>
+    <link rel="canonical" href="https://Lotus365.black"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        :root{  --em:  #16a34a;  --em2: #22c55e;  --em3: #4ade80;  --gld: #f5c518;  --g2:  #d4a017;  --g3:  #fde68a;  --red: #ef4444;  --tg:  #229ED9;  --wa:  #25D366;  --dark:#020c05;  --d2:  #061209;  --txt: #e8fdf0;  --mut: #2d6b4a;  --bdr: rgba(22,163,74,0.2);}
+        html,body{  height:100%;width:100%;  background:var(--dark);  font-family:'Outfit',sans-serif;  color:var(--txt);  overflow-x:hidden;  overflow-y:auto;}
+        
+        /* ── BACKGROUND EFFECTS ── */
+        .bg{  position:fixed;inset:0;z-index:0;pointer-events:none;  background: radial-gradient(ellipse at 15% 10%, rgba(22,163,74,0.16) 0%, transparent 48%), radial-gradient(ellipse at 85% 90%, rgba(22,163,74,0.10) 0%, transparent 48%), radial-gradient(ellipse at 50% 50%, rgba(245,197,24,0.04) 0%, transparent 55%);}
+        .hex-tex{  position:fixed;inset:0;z-index:0;pointer-events:none;  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='48'%3E%3Cpolygon points='14,2 42,2 56,26 42,46 14,46 0,26' fill='none' stroke='rgba(22,163,74,0.07)' stroke-width='1'/%3E%3C/svg%3E");  background-size:56px 48px;  animation:hexDrift 32s linear infinite;}
+        @keyframes hexDrift{  0%{background-position:0 0}  100%{background-position:56px 48px}}
+        .scan{  position:fixed;left:0;right:0;height:2px;z-index:0;pointer-events:none;  background:linear-gradient(90deg,transparent,rgba(22,163,74,0.5),rgba(245,197,24,0.4),transparent);  animation:scanDrop 16s linear infinite;}
+        @keyframes scanDrop{  0%{top:-2px;opacity:0}5%{opacity:1}95%{opacity:.15}100%{top:100%;opacity:0}}
+        .orb{position:fixed;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none}
+        .o1{width:380px;height:380px;background:rgba(22,163,74,0.13);top:-100px;right:-80px;animation:oF 13s ease-in-out infinite alternate}
+        @keyframes oF{0%{transform:translate(0,0) scale(1)}100%{transform:translate(16px,20px) scale(1.1)}}
 
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        /* ════════ PAGE ════════ */
+        .page{  position:relative;z-index:1;  min-height:100vh;  display:flex;flex-direction:column;  align-items:center;justify-content:center;  padding:28px 22px 30px;}
 
-:root{
-  --em:  #16a34a;
-  --em2: #22c55e;
-  --em3: #4ade80;
-  --gld: #f5c518;
-  --g2:  #d4a017;
-  --g3:  #fde68a;
-  --red: #ef4444;
-  --tg:  #229ED9;
-  --wa:  #25D366;
-  --dark:#020c05;
-  --d2:  #061209;
-  --txt: #e8fdf0;
-  --mut: #2d6b4a;
-  --bdr: rgba(22,163,74,0.2);
-}
+        /* ── LIVE BADGE (No Link) ── */
+        .live-badge{  display:flex;align-items:center;gap:7px;  margin-bottom:16px;  animation:fadeUp .4s ease both;}
+        .lb-dot{  width:8px;height:8px;border-radius:50%;  background:var(--red);box-shadow:0 0 8px var(--red);  animation:liveBlink 1.2s ease-in-out infinite;}
+        @keyframes liveBlink{0%,100%{opacity:1}50%{opacity:.2}}
+        .lb-txt{  font-size:10px;font-weight:700;letter-spacing:.28em;  color:rgba(255,255,255,.45);text-transform:uppercase;}
+        .lb-brand{  font-family:'Cinzel',serif;font-size:10px;font-weight:600;  letter-spacing:.2em;color:var(--mut);text-transform:uppercase;}
 
-html,body{
-  height:100%;width:100%;
-  background:var(--dark);
-  font-family:'Outfit',sans-serif;
-  color:var(--txt);
-  overflow-x:hidden;
-  overflow-y:auto;
-}
+        /* ── LOGO ZONE (Link Kept) ── */
+        .logo-link{text-decoration:none;display:block}
+        .logo-zone{  display:flex;flex-direction:column;align-items:center;  animation:fadeUp .4s .05s ease both;}
+        .logo-ring-wrap{position:relative;width:120px;height:120px}
+        .ring-conic{  position:absolute;inset:-7px;border-radius:50%;  border:2.5px solid transparent;  background: linear-gradient(var(--dark),var(--dark)) padding-box, conic-gradient(var(--em) 0%, var(--em3) 25%, var(--gld) 50%, var(--em3) 75%, var(--em) 100%) border-box;  animation:ringSpin 6s linear infinite;}
+        @keyframes ringSpin{to{transform:rotate(360deg)}}
+        .logo-img-wrap{  position:absolute;inset:0;border-radius:50%;  overflow:hidden;background:#fff;  display:flex;align-items:center;justify-content:center;}
+        .logo-img-wrap img{width:100%;height:100%;object-fit:cover}
+        .tl-txt{font-size:10px;font-weight:700;letter-spacing:.22em;color:var(--mut);text-transform:uppercase; margin-top: 10px;}
 
-/* ── LAYERED BACKGROUND ── */
-.bg{
-  position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse at 15% 10%, rgba(22,163,74,0.16) 0%, transparent 48%),
-    radial-gradient(ellipse at 85% 90%, rgba(22,163,74,0.10) 0%, transparent 48%),
-    radial-gradient(ellipse at 50% 50%, rgba(245,197,24,0.04) 0%, transparent 55%);
-}
+        /* ── HEADLINE (No Link) ── */
+        .hl-wrap{  text-align:center;margin-top:16px;  animation:fadeUp .4s .10s ease both;}
+        h1{  font-family:'Cinzel',serif;  font-size:clamp(32px,8vw,62px);  font-weight:900;letter-spacing:.05em;line-height:.95;  color:#fff;}
+        h1 .lt{color:var(--em3)}
+        h1 .num{color:var(--gld)}
+        .sub{  margin-top:8px;  font-size:clamp(11px,2.5vw,14px);  color:var(--mut);line-height:1.7;}
 
-.hex-tex{
-  position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='48'%3E%3Cpolygon points='14,2 42,2 56,26 42,46 14,46 0,26' fill='none' stroke='rgba(22,163,74,0.07)' stroke-width='1'/%3E%3C/svg%3E");
-  background-size:56px 48px;
-  animation:hexDrift 32s linear infinite;
-}
-@keyframes hexDrift{
-  0%{background-position:0 0}
-  100%{background-position:56px 48px}
-}
+        /* ── TRUST STRIP (No Link) ── */
+        .trust-strip{ width:100%;max-width:400px; margin-top:16px; animation:fadeUp .4s .16s ease both;}
+        .ts-inner{  display:flex;align-items:stretch;  background:rgba(22,163,74,.07);  border:1px solid var(--bdr);  border-radius:12px;overflow:hidden;}
+        .tc{  flex:1;padding:11px 6px;text-align:center;  position:relative;}
+        .tc-v{  font-family:'Cinzel',serif;  font-size:20px;font-weight:700;  color:var(--gld);line-height:1;}
+        .tc-l{font-size:8.5px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}
 
-.slash{
-  position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:repeating-linear-gradient(
-    -55deg,transparent,transparent 44px,
-    rgba(22,163,74,0.025) 44px,rgba(22,163,74,0.025) 45px
-  );
-}
+        /* ── SPORTS GRID (No Link) ── */
+        .sports-grid-wrap{  width:100%;max-width:400px;  margin-top:16px;  animation:fadeUp .4s .22s ease both;}
+        .sports-grid{  display:grid;  grid-template-columns:repeat(5,1fr);  gap:6px;}
+        .sp{  display:flex;flex-direction:column;align-items:center;gap:4px;  background:rgba(22,163,74,.06);  border:1px solid var(--bdr);  border-radius:9px;padding:9px 3px;  font-size:9.5px;font-weight:700;  color:var(--txt);}
 
-.scan{
-  position:fixed;left:0;right:0;height:2px;z-index:0;pointer-events:none;
-  background:linear-gradient(90deg,transparent,rgba(22,163,74,0.5),rgba(245,197,24,0.4),transparent);
-  animation:scanDrop 16s linear infinite;
-}
-@keyframes scanDrop{
-  0%{top:-2px;opacity:0}5%{opacity:1}95%{opacity:.15}100%{top:100%;opacity:0}
-}
+        /* ── BUTTONS (Links Kept) ── */
+        .cta-wrap{ width:100%;max-width:400px; margin-top:20px; animation:fadeUp .4s .42s ease both;}
+        .cta{  position:relative;overflow:hidden;  display:flex;align-items:center;justify-content:center;gap:10px;  width:100%;padding:16px 24px;border-radius:11px;  background:linear-gradient(135deg,var(--em),var(--em2));  color:#020c05;  font-weight:800;font-size:14.5px;text-transform:uppercase;text-decoration:none;  box-shadow:0 6px 28px rgba(22,163,74,.42); animation:ctaPulse 2.4s ease-in-out infinite;}
+        @keyframes ctaPulse{  0%,100%{transform:scale(1)}  50%{transform:scale(1.035)}}
+        
+        .social-row{  display:flex;gap:10px;  width:100%;max-width:400px;  margin-top:14px;}
+        .soc-btn{  flex:1;  display:flex;align-items:center;justify-content:center;gap:8px;  padding:12px 16px;  border-radius:10px;  font-size:11.5px;font-weight:800;  text-decoration:none; color:#fff; transition: transform 0.2s;}
+        .soc-btn:hover{transform: translateY(-2px);}
+        .tg-btn{ background:var(--tg); }
+        .wa-btn{ background:var(--wa); }
 
-.orb{position:fixed;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none}
-.o1{width:380px;height:380px;background:rgba(22,163,74,0.13);top:-100px;right:-80px;animation:oF 13s ease-in-out infinite alternate}
-.o2{width:260px;height:260px;background:rgba(22,163,74,0.09);bottom:-70px;left:-60px;animation:oF 17s ease-in-out infinite alternate-reverse}
-.o3{width:160px;height:160px;background:rgba(245,197,24,0.07);top:40%;left:-40px;animation:oF 10s ease-in-out infinite alternate}
-@keyframes oF{0%{transform:translate(0,0) scale(1)}100%{transform:translate(16px,20px) scale(1.1)}}
+        .credit{ margin-top:20px; font-size:10.5px; color:var(--mut); text-align:center;}
+        .credit a{ color:var(--em2); text-decoration:none; font-weight:700;}
 
-.pts{position:fixed;inset:0;z-index:0;pointer-events:none}
-.pt{position:absolute;border-radius:50%;animation:ptUp linear infinite;opacity:0}
-.pt1{width:2px;height:2px;background:var(--em2);left:6%;top:20%;animation-duration:7s;animation-delay:0s}
-.pt2{width:3px;height:3px;background:var(--gld);left:18%;top:70%;animation-duration:9s;animation-delay:1.2s}
-.pt3{width:2px;height:2px;background:var(--em3);left:35%;top:38%;animation-duration:8s;animation-delay:2.8s}
-.pt4{width:2px;height:2px;background:var(--em2);left:52%;top:80%;animation-duration:11s;animation-delay:.6s}
-.pt5{width:3px;height:3px;background:var(--gld);left:65%;top:22%;animation-duration:7s;animation-delay:1.8s}
-.pt6{width:2px;height:2px;background:var(--em3);left:78%;top:58%;animation-duration:10s;animation-delay:3.5s}
-.pt7{width:2px;height:2px;background:var(--gld);left:88%;top:32%;animation-duration:9s;animation-delay:.4s}
-.pt8{width:2px;height:2px;background:var(--em2);left:42%;top:12%;animation-duration:8s;animation-delay:4s}
-@keyframes ptUp{
-  0%{opacity:0;transform:translateY(0) scale(.5)}
-  20%{opacity:.9}80%{opacity:.2}
-  100%{opacity:0;transform:translateY(-70px) scale(1.4)}
-}
-
-/* ════════ PAGE ════════ */
-.page{
-  position:relative;z-index:1;
-  min-height:100vh;
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  padding:28px 22px 30px;
-  gap:0;
-}
-
-/* ── LIVE BADGE TOP ── */
-.live-badge{
-  display:flex;align-items:center;gap:7px;
-  margin-bottom:16px;
-  animation:fadeUp .4s ease both;
-  text-decoration:none;
-  transition:opacity .2s;
-}
-.live-badge:hover{opacity:.8}
-.lb-dot{
-  width:8px;height:8px;border-radius:50%;
-  background:var(--red);box-shadow:0 0 8px var(--red);
-  animation:liveBlink 1.2s ease-in-out infinite;
-}
-@keyframes liveBlink{0%,100%{opacity:1}50%{opacity:.2}}
-.lb-txt{
-  font-size:10px;font-weight:700;letter-spacing:.28em;
-  color:rgba(255,255,255,.45);text-transform:uppercase;
-}
-.lb-sep{width:1px;height:14px;background:var(--bdr)}
-.lb-brand{
-  font-family:'Cinzel',serif;font-size:10px;font-weight:600;
-  letter-spacing:.2em;color:var(--mut);text-transform:uppercase;
-}
-
-/* ── LOGO ZONE ── */
-.logo-link{text-decoration:none;display:block}
-.logo-zone{
-  display:flex;flex-direction:column;align-items:center;
-  animation:fadeUp .4s .05s ease both;
-}
-.logo-ring-wrap{position:relative;width:120px;height:120px}
-
-.ring-conic{
-  position:absolute;inset:-7px;border-radius:50%;
-  border:2.5px solid transparent;
-  background:
-    linear-gradient(var(--dark),var(--dark)) padding-box,
-    conic-gradient(
-      var(--em) 0%, var(--em3) 25%,
-      var(--gld) 50%, var(--em3) 75%,
-      var(--em) 100%
-    ) border-box;
-  animation:ringSpin 6s linear infinite;
-}
-.ring-outer{
-  position:absolute;inset:-15px;border-radius:50%;
-  border:1px solid rgba(22,163,74,0.14);
-  animation:ringSpin 14s linear infinite reverse;
-}
-@keyframes ringSpin{to{transform:rotate(360deg)}}
-
-.logo-img-wrap{
-  position:absolute;inset:0;border-radius:50%;
-  overflow:hidden;background:#fff;
-  display:flex;align-items:center;justify-content:center;
-}
-.logo-img-wrap img{width:100%;height:100%;object-fit:cover}
-
-.rdot{position:absolute;width:7px;height:7px;border-radius:50%}
-.rd1{top:-1px;left:50%;transform:translateX(-50%);background:var(--em2);box-shadow:0 0 8px var(--em)}
-.rd2{bottom:-1px;left:50%;transform:translateX(-50%);background:var(--em2);box-shadow:0 0 8px var(--em)}
-.rd3{left:-1px;top:50%;transform:translateY(-50%);background:var(--gld);box-shadow:0 0 8px var(--g2)}
-.rd4{right:-1px;top:50%;transform:translateY(-50%);background:var(--gld);box-shadow:0 0 8px var(--g2)}
-
-.trust-line{
-  margin-top:12px;
-  display:flex;align-items:center;gap:7px;
-}
-.tl-bar{width:24px;height:1px;background:linear-gradient(90deg,transparent,var(--em2))}
-.tl-bar.r{background:linear-gradient(90deg,var(--em2),transparent)}
-.tl-txt{font-size:10px;font-weight:700;letter-spacing:.22em;color:var(--mut);text-transform:uppercase}
-
-/* ── HEADLINE ── */
-.hl-link{text-decoration:none;display:block;width:100%}
-.hl-wrap{
-  text-align:center;margin-top:16px;
-  animation:fadeUp .4s .10s ease both;
-}
-.hl-eyebrow{
-  font-size:10px;font-weight:600;letter-spacing:.4em;
-  color:var(--mut);text-transform:uppercase;margin-bottom:6px;
-}
-h1{
-  font-family:'Cinzel',serif;
-  font-size:clamp(32px,8vw,62px);
-  font-weight:900;letter-spacing:.05em;line-height:.95;
-  color:#fff;
-  text-shadow:0 0 40px rgba(22,163,74,.3);
-}
-h1 .lt{color:var(--em3);text-shadow:0 0 22px rgba(74,222,128,.9)}
-h1 .num{color:var(--gld);text-shadow:0 0 20px rgba(245,197,24,.8)}
-.sub{
-  margin-top:8px;
-  font-size:clamp(11px,2.5vw,14px);
-  color:var(--mut);font-weight:400;letter-spacing:.025em;line-height:1.7;
-}
-.sub .s1{color:var(--em3);font-weight:700}
-.sub .s2{color:var(--gld);font-weight:700}
-
-/* ── TRUST STRIP ── */
-.trust-strip{
-  text-decoration:none;display:block;
-  width:100%;max-width:400px;
-  margin-top:16px;
-  animation:fadeUp .4s .16s ease both;
-}
-.ts-inner{
-  display:flex;align-items:stretch;
-  background:rgba(22,163,74,.07);
-  border:1px solid var(--bdr);
-  border-radius:12px;overflow:hidden;
-  transition:border-color .2s;
-}
-.trust-strip:hover .ts-inner{border-color:var(--em2)}
-.tc{
-  flex:1;padding:11px 6px;text-align:center;
-  position:relative;
-}
-.tc+.tc::before{
-  content:'';position:absolute;left:0;top:14%;bottom:14%;
-  width:1px;background:var(--bdr);
-}
-.tc-v{
-  font-family:'Cinzel',serif;
-  font-size:20px;font-weight:700;
-  color:var(--gld);letter-spacing:.03em;line-height:1;
-}
-.tc-v.g{color:var(--em3)}
-.tc-v.w{color:#fff}
-.tc-l{font-size:8.5px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}
-
-/* ── SPORTS GRID ── */
-.sports-grid-wrap{
-  width:100%;max-width:400px;
-  margin-top:16px;
-  animation:fadeUp .4s .22s ease both;
-}
-.sg-label{
-  font-size:8.5px;font-weight:700;letter-spacing:.28em;
-  color:var(--mut);text-transform:uppercase;
-  text-align:center;margin-bottom:8px;
-}
-.sports-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:6px;
-}
-.sp{
-  text-decoration:none;
-  display:flex;flex-direction:column;align-items:center;gap:4px;
-  background:rgba(22,163,74,.06);
-  border:1px solid var(--bdr);
-  border-radius:9px;padding:9px 3px;
-  font-size:9.5px;font-weight:700;
-  color:var(--txt);letter-spacing:.02em;
-  transition:background .2s,border-color .2s,transform .2s;
-  cursor:pointer;
-}
-.sp:hover{background:rgba(22,163,74,.16);border-color:var(--em2);transform:translateY(-2px)}
-.sp-ico{font-size:17px;line-height:1}
-
-/* ── FEATURE PILLS ── */
-.pills{
-  display:flex;flex-wrap:wrap;gap:6px;
-  justify-content:center;width:100%;max-width:400px;
-  margin-top:14px;
-  animation:fadeUp .4s .28s ease both;
-}
-.pill{
-  text-decoration:none;
-  display:flex;align-items:center;gap:5px;
-  background:rgba(22,163,74,.06);
-  border:1px solid var(--bdr);
-  border-radius:7px;padding:6px 13px;
-  font-size:10.5px;font-weight:700;
-  color:var(--txt);letter-spacing:.025em;
-  transition:background .2s,border-color .2s;
-}
-.pill:hover{background:rgba(22,163,74,.15);border-color:var(--em2)}
-.pdot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.pdot.g{background:var(--em3);box-shadow:0 0 6px var(--em)}
-.pdot.y{background:var(--gld);box-shadow:0 0 6px var(--g2)}
-.pdot.r{background:#f87171;box-shadow:0 0 6px #ef4444}
-
-/* ── SOCIAL LINKS (Telegram + WhatsApp) ── */
-.social-row{
-  display:flex;gap:10px;
-  width:100%;max-width:400px;
-  margin-top:14px;
-  animation:fadeUp .4s .32s ease both;
-}
-.soc-btn{
-  flex:1;
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  padding:12px 16px;
-  border-radius:10px;
-  font-size:11.5px;font-weight:800;
-  letter-spacing:.05em;text-transform:uppercase;
-  text-decoration:none;
-  border:none;cursor:pointer;
-  transition:transform .2s,box-shadow .2s,opacity .2s;
-  position:relative;overflow:hidden;
-}
-.soc-btn::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);
-  transform:translateX(-100%);
-  animation:shimmer 3s ease-in-out infinite;
-}
-.soc-btn:hover{transform:translateY(-2px);opacity:.9}
-
-.tg-btn{
-  background:linear-gradient(135deg,#1a7ab5,var(--tg),#4ab3e8);
-  color:#fff;
-  box-shadow:0 5px 20px rgba(34,158,217,.35);
-}
-.tg-btn:hover{box-shadow:0 8px 28px rgba(34,158,217,.55)}
-
-.wa-btn{
-  background:linear-gradient(135deg,#128c3c,var(--wa),#5de08a);
-  color:#fff;
-  box-shadow:0 5px 20px rgba(37,211,102,.35);
-}
-.wa-btn:hover{box-shadow:0 8px 28px rgba(37,211,102,.55)}
-
-.soc-ico{font-size:18px;line-height:1;position:relative;z-index:1}
-.soc-txt{position:relative;z-index:1}
-
-/* ── DISCLAIMER ── */
-.disc{
-  text-decoration:none;display:block;
-  width:100%;max-width:400px;
-  margin-top:12px;
-  animation:fadeUp .4s .36s ease both;
-}
-.disc-inner{
-  background:rgba(239,68,68,.04);
-  border:1px solid rgba(239,68,68,.16);
-  border-radius:8px;padding:7px 14px;
-  font-size:9.5px;color:rgba(255,180,180,.6);
-  text-align:center;line-height:1.5;font-weight:500;
-  transition:border-color .2s;
-}
-.disc:hover .disc-inner{border-color:rgba(239,68,68,.3)}
-
-/* ── CTA ── */
-.cta-wrap{
-  width:100%;max-width:400px;
-  margin-top:13px;
-  animation:fadeUp .4s .42s ease both;
-}
-.cta{
-  position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  width:100%;padding:16px 24px;border-radius:11px;
-  background:linear-gradient(135deg,var(--em),#15803d,var(--em2),var(--em));
-  background-size:250% auto;
-  color:#020c05;
-  font-family:'Outfit',sans-serif;
-  font-weight:800;font-size:14.5px;letter-spacing:.08em;
-  text-transform:uppercase;text-decoration:none;
-  border:none;cursor:pointer;
-  box-shadow:0 6px 28px rgba(22,163,74,.42);
-  animation:ctaPulse 2.4s ease-in-out infinite,gBg 3.5s linear infinite;
-}
-.cta::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
-  transform:translateX(-100%);
-  animation:shimmer 2.6s ease-in-out infinite;
-}
-@keyframes shimmer{0%{transform:translateX(-100%)}55%,100%{transform:translateX(110%)}}
-@keyframes ctaPulse{
-  0%,100%{transform:scale(1);box-shadow:0 6px 28px rgba(22,163,74,.42)}
-  50%{transform:scale(1.035);box-shadow:0 10px 40px rgba(22,163,74,.65)}
-}
-@keyframes gBg{0%{background-position:0% center}100%{background-position:250% center}}
-.cta-inner{position:relative;z-index:1;display:flex;align-items:center;gap:9px}
-.cta-arrow{font-size:17px;animation:arrBounce 1.8s ease-in-out infinite}
-@keyframes arrBounce{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
-.cta-badge{
-  background:rgba(0,0,0,.18);
-  border-radius:4px;padding:2px 8px;
-  font-size:10px;font-weight:800;letter-spacing:.06em;
-  color:rgba(255,255,255,.9);
-}
-
-/* credit */
-.credit{
-  margin-top:14px;padding-bottom:8px;
-  text-align:center;font-size:10.5px;
-  color:var(--mut);letter-spacing:.03em;
-}
-.credit a{color:var(--em2);text-decoration:none;font-weight:700}
-.credit a:hover{text-decoration:underline}
-
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(14px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-/* ════ PHONE ≤480px ════ */
-@media(max-width:480px){
-  .page{padding:20px 16px 24px}
-
-  .live-badge{margin-bottom:12px}
-  .lb-txt{font-size:9px}
-  .lb-brand{font-size:9px}
-
-  .logo-ring-wrap{width:100px;height:100px}
-  .ring-conic{inset:-5px;border-width:1.5px}
-  .ring-outer{inset:-12px}
-
-  h1{font-size:clamp(28px,8vw,36px);line-height:.92}
-  .sub{font-size:11px;margin-top:6px}
-
-  .trust-strip{max-width:100%;margin-top:12px}
-  .tc{padding:9px 5px}
-  .tc-v{font-size:17px}
-  .tc-l{font-size:7.5px}
-
-  .sports-grid-wrap{max-width:100%;margin-top:12px}
-  .sports-grid{gap:5px}
-  .sp{padding:7px 2px;font-size:8px;border-radius:7px}
-  .sp-ico{font-size:15px}
-
-  .pills{max-width:100%;margin-top:11px;gap:5px}
-  .pill{font-size:9.5px;padding:5px 10px}
-
-  .social-row{max-width:100%;margin-top:12px}
-  .soc-btn{font-size:10.5px;padding:11px 12px;border-radius:9px}
-  .soc-ico{font-size:16px}
-
-  .disc{max-width:100%;margin-top:10px}
-  .disc-inner{font-size:9px;padding:6px 11px}
-
-  .cta-wrap{max-width:100%;margin-top:11px}
-  .cta{font-size:13.5px;padding:14px 16px;border-radius:10px}
-
-  .hex-tex{
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='36'%3E%3Cpolygon points='10,2 32,2 42,19 32,34 10,34 0,19' fill='none' stroke='rgba(22,163,74,0.11)' stroke-width='1'/%3E%3C/svg%3E");
-    background-size:42px 36px;
-  }
-}
-
-/* ════ VERY SMALL ≤370px ════ */
-@media(max-width:370px){
-  .logo-ring-wrap{width:88px;height:88px}
-  h1{font-size:25px}
-  .tc-v{font-size:15px}
-  .sp{font-size:7.5px;padding:6px 1px}
-  .sp-ico{font-size:13px}
-  .pill{font-size:9px;padding:4px 9px}
-  .cta{font-size:12.5px;padding:13px 12px}
-  .soc-btn{font-size:9.5px;padding:10px 8px}
-}
-
-/* ════ LAPTOP ≥768px ════ */
-@media(min-width:768px){
-  .page{padding:28px 36px 28px}
-  .live-badge{margin-bottom:18px}
-  .lb-txt{font-size:11px;letter-spacing:.3em}
-  .logo-ring-wrap{width:130px;height:130px}
-  .ring-conic{inset:-8px;border-width:2.5px}
-  .ring-outer{inset:-17px}
-  .trust-line{margin-top:14px}
-  .tl-txt{font-size:10px;letter-spacing:.24em}
-  .hl-wrap{margin-top:18px}
-  .hl-eyebrow{font-size:10px;letter-spacing:.4em;margin-bottom:6px}
-  h1{font-size:58px}
-  .sub{font-size:14px;margin-top:8px}
-  .trust-strip{max-width:500px;margin-top:16px}
-  .tc{padding:12px 8px}
-  .tc-v{font-size:24px}
-  .tc-l{font-size:9px;margin-top:3px}
-  .sports-grid-wrap{max-width:500px;margin-top:15px}
-  .sg-label{font-size:9px;margin-bottom:9px}
-  .sports-grid{gap:8px}
-  .sp{padding:10px 5px;font-size:10px;border-radius:10px}
-  .sp-ico{font-size:20px}
-  .pills{max-width:500px;margin-top:14px;gap:8px}
-  .pill{font-size:11px;padding:7px 15px}
-  .social-row{max-width:500px;margin-top:16px;gap:12px}
-  .soc-btn{font-size:12.5px;padding:14px 20px;border-radius:11px}
-  .soc-ico{font-size:20px}
-  .disc{max-width:500px;margin-top:12px}
-  .disc-inner{font-size:10.5px;padding:8px 16px}
-  .cta-wrap{max-width:500px;margin-top:14px}
-  .cta{font-size:15.5px;padding:16px 32px;letter-spacing:.09em;border-radius:12px}
-}
-
-@media(min-width:1200px){
-  .logo-ring-wrap{width:140px;height:140px}
-  h1{font-size:66px}
-  .trust-strip,.sports-grid-wrap,.pills,.social-row,.disc,.cta-wrap{max-width:560px}
-}
-</style>
+        @keyframes fadeUp{ from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)}}
+        @media(max-width:480px){ .sports-grid{ grid-template-columns: repeat(2, 1fr); } }
+    </style>
 </head>
 <body>
+    <div class="bg"></div><div class="hex-tex"></div><div class="scan"></div><div class="orb o1"></div>
 
-<div class="bg"></div>
-<div class="hex-tex"></div>
-<div class="slash"></div>
-<div class="scan"></div>
-<div class="orb o1"></div>
-<div class="orb o2"></div>
-<div class="orb o3"></div>
-<div class="pts">
-  <div class="pt pt1"></div><div class="pt pt2"></div><div class="pt pt3"></div>
-  <div class="pt pt4"></div><div class="pt pt5"></div><div class="pt pt6"></div>
-  <div class="pt pt7"></div><div class="pt pt8"></div>
-</div>
-
-<main class="page">
-
-  <!-- Live badge -->
-  <a href="https://Lotus365.black" target="_blank" rel="noopener" class="live-badge">
-    <div class="lb-dot"></div>
-    <span class="lb-txt">Live Now</span>
-    <div class="lb-sep"></div>
-    <span class="lb-brand">Most Trusted Since 2019</span>
-  </a>
-
-  <!-- Logo -->
-  <a href="https://Lotus365.black" target="_blank" rel="noopener" class="logo-link">
-    <div class="logo-zone">
-      <div class="logo-ring-wrap">
-        <div class="ring-conic"></div>
-        <div class="ring-outer"></div>
-        <div class="logo-img-wrap">
-          <img
-            src="https://onebyone.site/wp-content/uploads/2026/03/logo_1765270328.png"
-            alt="Lotus365"
-            onerror="this.style.display='none';this.parentElement.style.background='#16a34a';this.parentElement.innerHTML='<span style=\'font-family:Cinzel,serif;font-size:16px;color:#fff;font-weight:700;letter-spacing:.08em\'>L365</span>'"
-          />
+    <main class="page">
+        <div class="live-badge">
+            <div class="lb-dot"></div>
+            <span class="lb-txt">Live Now</span>
+            <span class="lb-brand">Most Trusted Since 2019</span>
         </div>
-        <div class="rdot rd1"></div>
-        <div class="rdot rd2"></div>
-        <div class="rdot rd3"></div>
-        <div class="rdot rd4"></div>
-      </div>
-      <div class="trust-line">
-        <div class="tl-bar"></div>
-        <span class="tl-txt">Lotus365</span>
-        <div class="tl-bar r"></div>
-      </div>
-    </div>
-  </a>
 
-  <!-- Headline -->
-  <a href="https://Lotus365.black" target="_blank" rel="noopener" class="hl-link">
-    <div class="hl-wrap">
-      <div class="hl-eyebrow">— India's Fastest Growing Gaming Site —</div>
-      <h1><span class="lt">LOTUS</span><span class="num">365</span></h1>
-      <p class="sub">
-        <span class="s1">Sportsbook · Live Casino</span> · Card Games · Slots<br/>
-        <span class="s2">24H Withdrawals</span> · Over <span class="s1">1 Crore+</span> Trusted Players
-      </p>
-    </div>
-  </a>
+        <a href="https://Lotus365.black" class="logo-link">
+            <div class="logo-zone">
+                <div class="logo-ring-wrap">
+                    <div class="ring-conic"></div>
+                    <div class="logo-img-wrap">
+                        <img src="https://onebyone.site/wp-content/uploads/2026/03/logo_1765270328.png" alt="Lotus365">
+                    </div>
+                </div>
+                <div class="tl-txt">Lotus365</div>
+            </div>
+        </a>
 
-  <!-- Trust Stats -->
-  <a href="https://Lotus365.black" target="_blank" rel="noopener" class="trust-strip">
-    <div class="ts-inner">
-      <div class="tc"><div class="tc-v">1Cr+</div><div class="tc-l">Users</div></div>
-      <div class="tc"><div class="tc-v g">24H</div><div class="tc-l">Withdrawal</div></div>
-      <div class="tc"><div class="tc-v">300+</div><div class="tc-l">Live Games</div></div>
-      <div class="tc"><div class="tc-v w">FREE</div><div class="tc-l">To Join</div></div>
-    </div>
-  </a>
+        <div class="hl-wrap">
+            <h1><span class="lt">LOTUS</span><span class="num">365</span></h1>
+            <p class="sub">Sportsbook · Live Casino · Card Games<br/>24H Withdrawals · 1 Crore+ Players</p>
+        </div>
 
-  <!-- Sports Grid -->
-  <div class="sports-grid-wrap">
-    <div class="sg-label">— Play Now —</div>
-    <div class="sports-grid">
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">🏏</div>Cricket</a>
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">⚽</div>Football</a>
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">🎰</div>Casino</a>
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">🃏</div>Cards</a>
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">🎾</div>Tennis</a>
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">🎲</div>Matka</a>
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">🏆</div>Slots</a>
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">🕹️</div>Esports</a>
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">🥊</div>Kabaddi</a>
-      <a href="https://Lotus365.black" target="_blank" rel="noopener" class="sp"><div class="sp-ico">🎯</div>More</a>
-    </div>
-  </div>
+        <div class="trust-strip">
+            <div class="ts-inner">
+                <div class="tc"><div class="tc-v">1Cr+</div><div class="tc-l">Users</div></div>
+                <div class="tc"><div class="tc-v">24H</div><div class="tc-l">Withdrawal</div></div>
+                <div class="tc"><div class="tc-v">FREE</div><div class="tc-l">To Join</div></div>
+            </div>
+        </div>
 
+        <div class="sports-grid-wrap">
+            <div class="sports-grid">
+                <div class="sp">🏏 Cricket</div>
+                <div class="sp">⚽ Football</div>
+                <div class="sp">🎰 Casino</div>
+                <div class="sp">🃏 Cards</div>
+                <div class="sp">🎯 More</div>
+            </div>
+        </div>
 
-  <!-- CTA -->
-  <div class="cta-wrap">
-    <a href="https://Lotus365.black" target="_blank" rel="noopener" class="cta">
-      <span class="cta-inner">
-        Play Now on Lotus365
-        <span class="cta-arrow">→</span>
-        <span class="cta-badge">FREE</span>
-      </span>
-    </a>
-  </div>
-  <!-- Telegram + WhatsApp -->
-  <div class="social-row">
-    <a href="https://t.me/+Ei26rZXieng4NDM1" target="_blank" rel="noopener" class="soc-btn tg-btn">
-      <span class="soc-ico">✈️</span>
-      <span class="soc-txt">Telegram</span>
-    </a>
-    <a href="https://wa.link/2gtypd" target="_blank" rel="noopener" class="soc-btn wa-btn">
-      <span class="soc-ico">💬</span>
-      <span class="soc-txt">WhatsApp</span>
-    </a>
-  </div>
+        <div class="cta-wrap">
+            <a href="https://Lotus365.black" class="cta">
+                <span>Play Now on Lotus365 →</span>
+            </a>
+        </div>
 
+        <div class="social-row">
+            <a href="https://t.me/+Ei26rZXieng4NDM1" class="soc-btn tg-btn">✈️ Telegram</a>
+            <a href="https://wa.link/2gtypd" class="soc-btn wa-btn">💬 WhatsApp</a>
+        </div>
 
-  <p class="credit">Ads by <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank" rel="noopener">@Nexgroww_agency</a></p>
-
-</main>
-<!-- Meta Pixel Code -->
+        <p class="credit">Ads by <a href="https://t.me/+TRlJl628l-FkMWE9">@Nexgroww_agency</a></p>
+    </main>
+  <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
